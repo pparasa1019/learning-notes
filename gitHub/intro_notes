@@ -1,1 +1,57 @@
+## Notes prepared from https://learn.microsoft.com/fr-fr/training/github/
+--> GitHub is a cloud-based platform that uses Git, a distributed version control system, at its core. 
+--> The GitHub platform simplifies the process of collaborating on projects and provides a website, command-line tools, and overall flow that allows developers and users to work together.
+--> GitHub provides an AI powered developer platform to build, scale, and deliver secure software
+What is a repository?
+A repository contains all of your project's files and each file's revision history. 
+It's one of the essential parts that helps you collaborate with people. We can use repositories to manage your work, track changes, store revision history, and work with others.
+Public repositories are accessible to everyone on the internet.
+Private repositories are only accessible to you, people you explicitly share access with, and, for organization repositories, certain organization members.
 
+Note: To create subdirectories, type the / directory separator.
+
+What are gists?
+--> Gists are a simplified way to share code snippets with others.
+Every gist is a Git repository, which you can fork and clone and be made either public or secret. Public gists are displayed publicly where people can browse new ones as they’re created. 
+Public gists are also searchable. Conversely, secret gists aren't searchable, but they aren’t entirely private. If you send the URL of a secret gist to a friend, they'll be able to see it.
+What are wikis?
+Every repository on GitHub.com comes equipped with a section for hosting documentation, called a wiki. 
+You can use your repository's wiki to share long-form content about your project, such as how to use it, how you designed it, or its core principles. 
+While a README file quickly tells what your project can do, you can use a wiki to provide additional documentation.
+
+It’s worth a reminder that if your repository is private, only people who have at least read access to your repository will have access to your wiki.
+
+A commit is a change to one or more files on a branch. Every time a commit is created, it's assigned a unique ID and tracked along with the time and contributor. 
+Commits provide a clear audit trail for anyone reviewing the history of a file or linked item, such as an issue or pull request.
+Within a git repository, a file can exist in several valid states as it goes through the version control process. 
+The primary states for a file in a Git repository are Untracked and Tracked.
+
+Untracked: An initial state of a file when it isn't yet part of the Git repository. Git is unaware of its existence.
+
+Tracked: A tracked file is one that Git is actively monitoring. It can be in one of the following substates:
+
+Unmodified: The file is tracked, but it hasn't been modified since the last commit.
+Modified: The file has been changed since the last commit, but these changes aren't yet staged for the next commit.
+Staged: The file has been modified, and the changes have been added to the staging area (also known as the index). These changes are ready to be committed.
+Committed: The file is in the repository's database. It represents the latest committed version of the file.
+These states and substates are important to collaborating with your team to know where each and every commit is in the process of your project. 
+
+What are pull requests?
+A pull request is the mechanism used to signal that the commits from one branch are ready to be merged into another branch.
+
+The team member submitting the pull request asks one or more reviewers to verify the code and approve the merge. 
+These reviewers have the opportunity to comment on changes, add their own, or use the pull request itself for further discussion.
+
+Once the changes have been approved (if required), the pull request's source branch (the compare branch) is merged into the base branch.
+
+The GitHub flow
+The GitHub flow can be defined as a lightweight workflow that allows for safe experimentation. You can test new ideas and collaboration with your team by using branching, pull requests, and merging.
+
+Now that we know the basics of GitHub we can walk through the GitHub flow and its components.
+
+Start by creating a branch so that the changes, features, and fixes you create don't affect the main branch.
+Next, make your changes. We recommend deploying changes to your feature branch before merging into the main branch. Doing so ensures the changes are valid in a production environment.
+Now, create a pull request to ask collaborators for feedback. Pull request review is so valuable that some repositories require an approving review before pull requests can be merged.
+Then review and implement your feedback from your collaborators.
+Once you feel great about your changes, it's time to get your pull request approved and merge it into the main branch.
+Finally, you can delete your branch. Deleting your branch signals your work on the branch is complete and prevents you or others from accidentally using old branches.
